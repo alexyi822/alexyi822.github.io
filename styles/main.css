@@ -1,0 +1,87 @@
+/** {
+  border: 1px solid red !important;
+}*/
+
+#headerName {
+
+  text-align: right;
+  margin-right: 12px;
+}
+
+#navBar {
+
+  padding-top: 4px;
+  background-color: white;
+  height: 76px;
+  /*height: 16%;*/
+  border-bottom:2px solid #e5e5e5;
+  position: fixed;
+}
+
+#navItems {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  /*margin-left: 120px;*/
+  /*margin-right: 88px;*/
+}
+
+#resume {
+  height: 675px;
+  min-width: 100% !important;
+}
+
+#mainPage {
+  /*background-image:url(../images/samurai.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 500px;*/
+  text-align: center;
+}
+
+.nav {
+
+  color: black !important;
+}
+
+.main-toolbar {
+
+  background-color: #60dfe5;
+}
+
+.content {
+  /*padding-left: 32px;
+  padding-right: 32px;*/
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 80px;
+  margin-bottom: 44px;
+  background-color: white;
+}
+
+.employer {
+
+  margin-top: 4px;
+  margin-bottom: 4px;
+
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: white;
+}
+
+footer {
+  bottom: 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  border-top:2px solid #e5e5e5;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: white;
+  /*height: 4%;*/
+}

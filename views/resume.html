@@ -1,0 +1,26 @@
+<ng-controller="ResCtrl">
+  <div layout="column">
+    <div><b>Education</b></div>
+    <div layout-gt-sm="row" layout="column">
+      <div class="education" flex="50" style="text-align: center;">University of California, Davis</div>
+      <div class="education" flex="50" style="text-align: center;">September 2014 - December 2016<br>B.S. Computer Science</div>
+    </div>
+  </div>
+
+
+  <div layout="column">
+    <div>Work Experience</div>
+    <div layout-gt-sm="row" layout="column" ng-repeat="job in jobs">
+      <div class="employer" flex="50" style="text-align: center;"><a href="{{job.url}}">{{job.employer}}</a></div>
+      <div class="employer" flex="50" style="text-align: center;">{{job.date}}<br>{{job.location}}</div>
+    </div>
+  </div>
+
+  <div layout="column">
+    <div>Skills & Projects</div>
+  </div>
+
+  <div layout="column">
+
+  </div>
+</ng-controller>

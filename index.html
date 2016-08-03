@@ -1,34 +1,128 @@
-<!doctype html> <html> <head> <meta charset="utf-8"> <title></title> <meta name="description" content=""> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.950632fd.css"> <link rel="stylesheet" href="styles/main.48211701.css"> </head> <body ng-app="portfolioApp"> <!--[if lte IE 8]>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" /> -->
+
+    <link rel="stylesheet" href="https://gitcdn.link/repo/angular/bower-material/master/angular-material.css">
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="portfolioApp">
+    <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]--> <!-- Add your site or application content here --> <div layout="column" flex ng-controller="NavCtrl as nav"> <md-toolbar id="navBar" layout="row" ng-show="nav.$mdMedia('gt-sm')"> <div flex="66"> <md-fab-speed-dial flex="66" md-open="nav.isOpen" md-direction="right" class="md-scale" ng-mouseenter="nav.isOpen=true" ng-mouseleave="nav.isOpen=false"> <md-fab-trigger style="margin-left: 32px"> <md-button aria-label="contacts" class="md-fab md-primary" style="margin-left: 0px"> <md-icon md-svg-src="images/user.66fdfb59.svg"></md-icon> </md-button> </md-fab-trigger> <md-fab-actions> <md-button aria-label="Github" class="md-fab md-raised md-mini" ng-href="https://github.com/alexyi822"> <md-icon md-svg-src="images/github.80505943.svg" aria-label="Github"></md-icon> </md-button> <md-button aria-label="LinkedIn" class="md-fab md-raised md-mini" ng-href="https://www.linkedin.com/in/alexyi822"> <md-icon md-svg-src="images/linkedin.a2afb318.svg" aria-label="LinkedIn"></md-icon> </md-button> <md-button aria-label="Email" class="md-fab md-raised md-mini" ng-href="mailto:atyi@ucdavis.edu"> <md-icon md-svg-src="images/envelope.e12400c4.svg" aria-label="email"></md-icon> </md-button> </md-fab-actions> </md-fab-speed-dial> </div> <div flex="33"> <!-- <div id="navItems" layout-xs="column" layout-gt-xs="row" layout-align="center center"> --> <div id="navItems" layout="row" layout-align="end center" style="margin-right: 32px"> <md-button class="nav" ng-href="#/about">About</md-button> <md-button class="nav" ng-href="#/resume">Resume</md-button> <md-button class="nav" ng-href="#/blog">Blog</md-button> </div> </div> </md-toolbar> <md-toolbar id="navBar" layout="row" ng-show="!(nav.$mdMedia('gt-sm'))" layout-align="center"> <div id="navItems" layout="row"> <md-button class="nav" ng-href="#/about">About</md-button> <md-button class="nav" ng-href="#/resume">Resume</md-button> <md-button class="nav" ng-href="#/blog">Blog</md-button> </div> </md-toolbar> <md-content class="content" ng-view layout="column" flex> </md-content> <footer> <div> test footer stuff</div> </footer> </div> <!-- <md-content ng-view layout="column">
-    </md-content> --> <!-- <md-sidenav layout="column" flex>
-      <div layout="row" layout-align="center left">
-        Alex Yi
-      </div>
+    <![endif]-->
 
-      <md-content flex>
 
-        <ul>
-              <li>
-                <md-button>Menu</md-button>
-              </li>
-              <li>
-                <md-button>About</md0button>
-              </li>
+    <!-- Desktop navbar -->
+    <div layout="column" flex ng-controller="NavCtrl as nav">
+      <md-toolbar id="navBar" layout="row"ng-show="nav.$mdMedia('gt-sm')">
+        <div flex="66">
+        <!-- <div flex="50" layout="row" layout-align="center center" > -->
+          <md-fab-speed-dial flex="66" md-open="nav.isOpen" md-direction="right" class="md-scale"
+                             ng-mouseenter="nav.isOpen=true" ng-mouseleave="nav.isOpen=false">
+            <md-fab-trigger style="margin-left: 32px;">
+              <md-button aria-label="contacts" class="md-fab md-primary" style="margin-left: 0px;">
+                <md-icon md-svg-src="images/user.svg"></md-icon>
+              </md-button>
+            </md-fab-trigger>
+            <md-fab-actions>
+              <md-button aria-label="Github" class="md-fab md-raised md-mini" ng-href="https://github.com/alexyi822">
+                <md-icon md-svg-src="images/github.svg" aria-label="Github"></md-icon>
+              </md-button>
+              <md-button aria-label="LinkedIn" class="md-fab md-raised md-mini" ng-href="https://www.linkedin.com/in/alexyi822">
+                <md-icon md-svg-src="images/linkedin.svg" aria-label="LinkedIn"></md-icon>
+              </md-button>
+              <md-button aria-label="Email" class="md-fab md-raised md-mini" ng-href="mailto:atyi@ucdavis.edu">
+                <md-icon md-svg-src="images/envelope.svg" aria-label="email"></md-icon>
+              </md-button>
+            </md-fab-actions>
+          </md-fab-speed-dial>
+        </div>
 
-        </ul>
+
+        <div flex="33">
+        <!-- <div flex="50"> -->
+          <div id="navItems" layout="row" layout-align="end center" style="margin-right: 32px;">
+            <md-button class="nav" ng-href="#/about">About</md-button>
+            <md-button class="nav" ng-href="#/resume">Resume</md-button>
+            <md-button class="nav" ng-href="#/blog">Blog</md-button>
+          </div>
+        </div>
+      </md-toolbar>
+
+      <!-- Mobile navbar -->
+      <md-toolbar id="navBar" layout="row" ng-show="!(nav.$mdMedia('gt-sm'))" layout-align="center">
+        <div id="navItems" layout="row">
+          <md-button class="nav" ng-href="#/about">About</md-button>
+          <md-button class="nav" ng-href="#/resume">Resume</md-button>
+          <md-button class="nav" ng-href="#/blog">Blog</md-button>
+        </div>
+
+      </md-toolbar>
+
+      <md-content class="content" ng-view layout="column" flex>
       </md-content>
 
-    </md-sidenav>
+      <footer>
+        <div> test footer stuff</div>
+      </footer>
 
-    <div layout="column" flex>
-      <md-toolbar class="main-toolbar">
-        <h1 id="headerName">Alex Yi</h1>
-      </md-toolbar>
-    </div> --> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID --> <script>!function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+
+    </div>
+
+
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
        (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
        r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
        }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
        ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');</script> <script src="scripts/vendor.e98f49e1.js"></script> <script src="scripts/scripts.7b511a64.js"></script> </body> </html>
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <!-- <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-aria.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+
+    <!-- Angular Material Javascript using GitCDN to load directly from `bower-material/master` -->
+    <script src="https://gitcdn.link/repo/angular/bower-material/master/angular-material.js"></script>
+
+
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/nav-controller.js"></script>
+        <script src="scripts/controllers/resume-controller.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
