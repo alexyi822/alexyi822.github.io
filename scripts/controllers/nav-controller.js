@@ -4,12 +4,12 @@
 
   /**
    * @ngdoc function
-   * @name portfolioApp.controller:NavCtrl
+   * @name portfolio.controller:NavCtrl
    * @description
    * # NavCtrl
-   * Controller of the portfolioApp
+   * Controller of the portfolio
    */
-  angular.module('portfolioApp')
+  angular.module('portfolio')
     .controller('NavCtrl', ['$mdMedia', function ($mdMedia) {
 
       var self = this;

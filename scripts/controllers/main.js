@@ -4,18 +4,14 @@
 
   /**
    * @ngdoc function
-   * @name portfolioApp.controller:MainCtrl
+   * @name portfolio.controller:MainCtrl
    * @description
    * # MainCtrl
-   * Controller of the portfolioApp
+   * Controller of the portfolio
    */
-  angular.module('portfolioApp')
+  angular.module('portfolio')
     .controller('MainCtrl', function () {
-      this.awesomeThings = [
-        'HTML5 Boilerplate',
-        'AngularJS',
-        'Karma'
-      ];
+      
     });
 
 }());

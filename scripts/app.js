@@ -4,22 +4,14 @@
 
   /**
    * @ngdoc overview
-   * @name portfolioApp
+   * @name portfolio
    * @description
-   * # portfolioApp
+   * # portfolio
    *
    * Main module of the application.
    */
   angular
-    // .module('portfolioApp', [
-    //   'ngAnimate',
-    //   'ngCookies',
-    //   'ngResource',
-    //   'ngRoute',
-    //   'ngSanitize',
-    //   'ngMaterial'
-    // ])
-    .module('portfolioApp', [
+    .module('portfolio', [
       'ngRoute',
       'ngMaterial'
     ])
@@ -36,7 +28,7 @@
           controller: 'ResCtrl'
         })
         .when('/blog', {
-          templateUrl: '404.html'
+          templateUrl: 'views/blog.html'
         })
         .otherwise({
           redirectTo: '/'
