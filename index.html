@@ -18,11 +18,6 @@
     <!-- endbuild -->
   </head>
   <body ng-app="portfolioApp">
-    <!--[if lte IE 8]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-
     <!-- Desktop navbar -->
     <div layout="column" flex ng-controller="NavCtrl as nav">
       <md-toolbar id="navBar" layout="row"ng-show="nav.$mdMedia('gt-sm')">
@@ -51,10 +46,9 @@
 
 
         <div flex="33">
-        <!-- <div flex="50"> -->
           <div id="navItems" layout="row" layout-align="end center" style="margin-right: 32px;">
             <md-button class="nav" ng-href="#/about">About</md-button>
-            <md-button class="nav" ng-href="#/resume">Resume</md-button>
+            <md-button class="nav" ng-href="https://drive.google.com/file/d/0B_7YP4TPigyzQnhkbUlSNk1yUVE/view?usp=sharing">Resume</md-button>
             <md-button class="nav" ng-href="#/blog">Blog</md-button>
           </div>
         </div>
@@ -64,7 +58,7 @@
       <md-toolbar id="navBar" layout="row" ng-show="!(nav.$mdMedia('gt-sm'))" layout-align="center">
         <div id="navItems" layout="row">
           <md-button class="nav" ng-href="#/about">About</md-button>
-          <md-button class="nav" ng-href="#/resume">Resume</md-button>
+          <md-button class="nav" ng-href="https://drive.google.com/file/d/0B_7YP4TPigyzQnhkbUlSNk1yUVE/view?usp=sharing">Resume</md-button>
           <md-button class="nav" ng-href="#/blog">Blog</md-button>
         </div>
 
@@ -74,7 +68,7 @@
       </md-content>
 
       <footer>
-        <div> test footer stuff</div>
+        <div>2016</div>
       </footer>
 
 
